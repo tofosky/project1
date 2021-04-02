@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.5.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/all.min.css">
+    
+    <title>Document</title>
+    <style>
+        .showHIde{
+            display:block;
+        }
+
+    </style>
+</head>
+<body style="background-color: rgb(206, 223, 223);">
+   <div class="container app ">
+      <div class="header text-center">
+          <h3>Flashcards</h3>
+      </div>
+      <div class="btnAdd text-center">
+         <button id="btnadd" style="border: 2.5px solid orange; color: orange;">Add Question</button>
+      </div>
+      <div  id="formQuestions" style="border: 2.5px solid orange; width:500px; margin-top: 50px; display: none;" >
+          <form>
+             <div> <label>Question</label> <i class="fas fa-times" id="btnClose" style="float: right;" ></i></div>
+             <div><input id="txtQuest" type='textField' style="width:490px; height: 50px; outline:none"></div>
+             <p></p>
+             <input type="text" id="index" hidden>
+             <p></p>
+             <div> Answer</div>
+             <div><input id="txtAns" type='textField' style="width:490px; height: 50px; outline: none;"></div>
+             <div><input type="button" id="btnSave" style="border: 2.5px solid blue; width:130px; margin-top: 25px; margin-bottom: 10px;"  value="Save" onclick="add(document.getElementById('txtQuest').value, document.getElementById('txtAns').value)"></div>
+             <div><input type="button" id="btnUpdate" style="border: 2.5px solid blue; width:130px; margin-top: 25px; margin-bottom: 10px; display: none;"  value="Update" onclick="update()"></div>
+          </form>
+      </div>
+      <div class="text-center">
+          <ul id="listing" style="list-style: none;"></ul>
+      </div>
+   </div>
+    <script src="app.js"></script>
+</body>
+</html>
