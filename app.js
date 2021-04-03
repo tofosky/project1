@@ -11,7 +11,7 @@ let btnUpdate = document.getElementById('btnUpdate')
 // creating the array 
 let flashCards = []
 // getting data from local storage
-//flashCards = JSON.parse(localStorage.getItem('cards'))
+flashCards = JSON.parse(localStorage.getItem('cards'))
     //Add the form
     btnAdd.addEventListener('click', (e) =>{
         e.preventDefault()
